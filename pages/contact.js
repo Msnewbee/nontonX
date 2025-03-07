@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar'; // Pastikan nama file benar
 
 export default function Contact() {
   return (
