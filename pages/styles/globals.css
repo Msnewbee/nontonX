@@ -17,3 +17,27 @@ button {
 .card-content {
   @apply p-2;
 }
+
+.episode-list {
+  @apply mt-8;
+}
+
+.episode-list button {
+  @apply block w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700;
+}
+
+.episode-list button.bg-gray-200 {
+  @apply bg-gray-200 dark:bg-gray-600;
+}
+
+.episode-list .w-1/4 {
+  @apply w-1/4;
+}
+
+.episode-list .w-3/4 {
+  @apply w-3/4 p-4;
+}
+
+img {
+  @apply rounded-lg shadow-md;
+}
