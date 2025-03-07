@@ -20,13 +20,13 @@ export default function EpisodeList() {
 
   return (
     <div className="episode-list mt-8">
-      <h2 className="text-3xl font-semibold mb-6">Solo Leveling Season 1</h2>
-      <div className="flex">
-        <ul className="w-1/4 bg-gray-100 dark:bg-gray-700 rounded-lg shadow-md overflow-hidden">
+      <h2 className="text-3xl font-semibold mb-6">Solo Leveling Season 1 - Streaming Video</h2>
+      <div className="lg:flex">
+        <ul className="w-full lg:w-1/4 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md overflow-hidden mb-4 lg:mb-0">
           {episodes.map((episode) => (
             <li key={episode.id}>
               <button
-                className={`block w-full text-left px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-600 ${selectedEpisode.id === episode.id ? 'bg-gray-200 dark:bg-gray-600' : ''}`}
+                className={`block w-full text-left px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 ${selectedEpisode.id === episode.id ? 'bg-gray-200 dark:bg-gray-700' : ''}`}
                 onClick={() => setSelectedEpisode(episode)}
               >
                 {episode.title}
@@ -34,7 +34,7 @@ export default function EpisodeList() {
             </li>
           ))}
         </ul>
-        <div className="w-3/4 p-4">
+        <div className="w-full lg:w-3/4 p-4">
           <iframe
             width="640"
             height="360"
