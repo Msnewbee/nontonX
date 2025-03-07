@@ -20,13 +20,13 @@ export default function EpisodeList() {
 
   return (
     <div className="episode-list mt-8">
-      <h2 className="text-2xl font-semibold mb-4">Solo Leveling Season 1</h2>
+      <h2 className="text-3xl font-semibold mb-6">Solo Leveling Season 1</h2>
       <div className="flex">
-        <ul className="w-1/4">
+        <ul className="w-1/4 bg-gray-100 dark:bg-gray-700 rounded-lg shadow-md overflow-hidden">
           {episodes.map((episode) => (
             <li key={episode.id}>
               <button
-                className={`block w-full text-left px-4 py-2 ${selectedEpisode.id === episode.id ? 'bg-gray-200' : ''}`}
+                className={`block w-full text-left px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-600 ${selectedEpisode.id === episode.id ? 'bg-gray-200 dark:bg-gray-600' : ''}`}
                 onClick={() => setSelectedEpisode(episode)}
               >
                 {episode.title}
@@ -41,7 +41,7 @@ export default function EpisodeList() {
             frameBorder="0"
             src={selectedEpisode.videoUrl}
             allowFullScreen
-            className="w-full h-full"
+            className="w-full h-full rounded-lg shadow-md"
           ></iframe>
         </div>
       </div>
