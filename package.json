@@ -2,13 +2,13 @@
   "name": "nontonx",
   "version": "1.0.0",
   "private": true,
+  {
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "next": "^13.1.1",
-    "framer-motion": "^10.12.0",
-    "lucide-react": "^0.315.0",
-    "video.js": "^8.3.0"
+    "next": "^13.4.0",
+    "framer-motion": "^10.12.16",
+    "lucide-react": "^0.268.0"
   },
   "scripts": {
     "dev": "next dev",
@@ -16,3 +16,4 @@
     "start": "next start"
   }
 }
+
