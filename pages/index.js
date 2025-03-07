@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Navbar from '../components/Navbar'; // Pastikan nama file benar
-import { Button } from '../components/ui/Button'; // Pastikan nama file benar
+import Navbar from '../components/Navbar';
+import { Button } from '../components/ui/Button';
 import { Card, CardContent } from '../components/ui/Card';
 import VideoPlayer from '../components/VideoPlayer';
 
