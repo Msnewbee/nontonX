@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Navbar from '../components/Navbar';
-import { Button } from '../components/ui/Button';
+import Navbar from '../components/Navbar'; // Pastikan nama file benar
+import { Button } from '../components/ui/Button'; // Pastikan nama file benar
 import { Card, CardContent } from '../components/ui/Card';
 import VideoPlayer from '../components/VideoPlayer';
 
@@ -11,7 +11,7 @@ export default function Home() {
     <div>
       <Head>
         <title>NontonX - Platform Streaming Film</title>
-        <meta name="description" content="NontonX adalah platform streaming film berbasis Next.js yang memungkinkan pengguna untuk menonton film secara langsung. Nikmati streaming video langsung dengan berbagai fitur menarik." />
+        <meta name="description" content="NontonX adalah platform streaming film berbasis Next.js yang memungkinkan pengguna untuk menonton film secara langsung. Nikmati streaming video langsung dengan kualitas tinggi." />
       </Head>
       <Navbar />
       <main className="container mx-auto p-4">
