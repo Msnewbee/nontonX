@@ -9,4 +9,4 @@
 ✅ Integrasi Video.js  
 
 ## 🚀 Cara Menjalankan Proyek
-1. Clone repo ini:  
+1. Clone repo ini:   https://github.com/Msnewbee/nontonX.git
