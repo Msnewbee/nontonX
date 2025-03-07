@@ -10,15 +10,15 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>NontonX</title>
-        <meta name="description" content="Platform streaming film berbasis Next.js" />
+        <title>NontonX - Platform Streaming Film</title>
+        <meta name="description" content="NontonX adalah platform streaming film berbasis Next.js yang memungkinkan pengguna untuk menonton film secara langsung. Nikmati streaming video langsung dengan mode gelap & terang, desain responsif, dan integrasi Video.js." />
       </Head>
       <main className="container mx-auto p-4">
-        <h1 className="text-4xl font-bold text-center mb-8">Selamat Datang di NontonX</h1>
+        <h1 className="text-4xl font-bold text-center mb-8">Selamat Datang di NontonX - Platform Streaming Film</h1>
         <VideoPlayer videoUrl={videoUrl} />
         <Card className="mt-8">
           <CardContent>
-            <h2 className="text-2xl font-semibold">Fitur NontonX</h2>
+            <h2 className="text-2xl font-semibold">Fitur Streaming NontonX</h2>
             <ul className="list-disc ml-5 mt-2">
               <li>Streaming video langsung</li>
               <li>Mode gelap & terang</li>
