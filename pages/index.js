@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import VideoPlayer from '../components/VideoPlayer';
+import EpisodeList from '../components/EpisodeList';
 
 export default function Home() {
   const videoUrl = 'https://www.example.com/video.mp4';
@@ -26,6 +27,10 @@ export default function Home() {
             </ul>
           </CardContent>
         </Card>
+        <div className="mt-8 text-center">
+          <img src="https://mega.nz/file/YMwVRRwa#XDwrSQoGjMXktNAa_WPbvVcR715V_fDgkSmLi1nYOdk" alt="Solo Leveling Season 1" className="mx-auto mb-4 rounded-lg shadow-md" />
+        </div>
+        <EpisodeList />
         <div className="text-center mt-8">
           <Button onClick={() => alert('Mulai Nonton!')}>Mulai Nonton</Button>
         </div>
