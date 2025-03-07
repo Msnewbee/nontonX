@@ -1,11 +1,11 @@
 export default function VideoPlayer({ videoUrl }) {
   return (
     <div className="relative w-full aspect-video">
-      <iframe
+      <video
         src={videoUrl}
         className="w-full h-full"
-        allowFullScreen
-      ></iframe>
+        controls
+      />
     </div>
   );
 }
