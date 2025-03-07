@@ -62,4 +62,24 @@
   h2 {
     @apply text-3xl;
   }
+
+  nav {
+    @apply bg-primary text-white p-4;
+  }
+
+  nav .container {
+    @apply flex justify-between items-center;
+  }
+
+  nav .container .text-2xl {
+    @apply font-bold;
+  }
+
+  nav ul {
+    @apply flex space-x-4;
+  }
+
+  nav ul li a {
+    @apply hover:text-accent;
+  }
 }
