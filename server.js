@@ -1,50 +1,55 @@
 const express = require('express');
+const next = require('next');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
-const app = express();
-const port = 3000;
 
-app.use(express.static('public'));
-app.use(bodyParser.json());
-app.use(express.urlencoded({ extended: true }));
+const dev = process.env.NODE_ENV !== 'production';
+const app = next({ dev });
+const handle = app.getRequestHandler();
 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
-});
+const port = process.env.PORT || 3000;
 
-app.get('/contact', (req, res) => {
-    res.sendFile(__dirname + '/contact.html');
-});
+app.prepare().then(() => {
+  const server = express();
 
-app.post('/send-email', (req, res) => {
+  server.use(bodyParser.json());
+  server.use(express.urlencoded({ extended: true }));
+
+  server.post('/send-email', (req, res) => {
     const { name, email, message } = req.body;
 
     const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: 'your-email@gmail.com', // Ganti dengan email Anda
-            pass: 'your-email-password' // Ganti dengan password email Anda
-        }
+      service: 'gmail',
+      auth: {
+        user: process.env.EMAIL_USER, // Gunakan variabel lingkungan untuk keamanan
+        pass: process.env.EMAIL_PASS  // Gunakan variabel lingkungan untuk keamanan
+      }
     });
 
     const mailOptions = {
-        from: email,
-        to: 'bilariko@gmail.com', // Ganti dengan email tujuan Anda
-        subject: `Contact Form Submission from ${name}`,
-        text: message
+      from: email,
+      to: 'bilariko@gmail.com',
+      subject: `Contact Form Submission from ${name}`,
+      text: message
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            console.log(error);
-            res.status(500).send('Failed to send message.');
-        } else {
-            console.log('Email sent: ' + info.response);
-            res.status(200).send('Message sent successfully!');
-        }
+      if (error) {
+        console.log(error);
+        res.status(500).send('Failed to send message.');
+      } else {
+        console.log('Email sent: ' + info.response);
+        res.status(200).send('Message sent successfully!');
+      }
     });
-});
+  });
 
-app.listen(port, () => {
+  server.all('*', (req, res) => {
+    return handle(req, res);
+  });
+
+  server.listen(port, (err) => {
+    if (err) throw err;
     console.log(`Server is running at http://localhost:${port}`);
+  });
 });
