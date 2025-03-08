@@ -1,9 +1,9 @@
-import React from 'react';
+// __tests__/index.test.js
 import { render, screen } from '@testing-library/react';
-import Home from '../index';
+import Home from '../pages/index';
 
-test('renders Home component', () => {
+test('renders homepage', () => {
   render(<Home />);
-  const linkElement = screen.getByText(/NontonX/i);
-  expect(linkElement).toBeInTheDocument();
+  const heading = screen.getByText(/welcome to nontonx/i);
+  expect(heading).toBeInTheDocument();
 });
