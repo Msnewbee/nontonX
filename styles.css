@@ -1,48 +1,53 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset dasar untuk menghilangkan margin dan padding default */
+* {
     margin: 0;
     padding: 0;
-    background-color: #1c1c1c;
-    color: white;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+    padding: 10px;
 }
 
 header {
-    background-color: #333;
-    padding: 15px;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-main {
+    background: #1f1f1f;
     padding: 20px;
     text-align: center;
 }
 
-.anime-container {
+header h1 {
+    color: #ffcc00;
+}
+
+nav ul {
+    list-style: none;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
 
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.anime-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
 .anime {
-    background-color: #2a2a2a;
+    background: #1f1f1f;
     padding: 15px;
     border-radius: 10px;
+    text-align: center;
 }
 
 iframe {
@@ -50,59 +55,50 @@ iframe {
     max-width: 560px;
     height: 315px;
     border: none;
-}
-
-#anime-info {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #444;
     border-radius: 10px;
 }
 
-ul {
-    padding: 0;
-    list-style-type: none;
-}
-
-ul li {
-    margin: 10px 0;
-}
-
-ul li a {
-    color: #ffcc00;
-    text-decoration: none;
-}
-
-section#kontak {
-    background-color: #333;
+#kontak {
+    background: #1f1f1f;
     padding: 20px;
     margin-top: 20px;
+    border-radius: 10px;
     text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 10px;
 }
 
-label, input, textarea {
-    width: 80%;
-    max-width: 400px;
-    margin-bottom: 10px;
+input, textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
 }
 
 button {
-    background-color: #ffcc00;
-    color: black;
-    padding: 10px 20px;
+    background: #ffcc00;
+    color: #000;
+    padding: 10px;
     border: none;
     cursor: pointer;
+    font-weight: bold;
     border-radius: 5px;
+}
+
+button:hover {
+    background: #ffaa00;
 }
 
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: #222;
+    padding: 15px;
+    background: #1f1f1f;
+    margin-top: 20px;
 }
