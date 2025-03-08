@@ -1,179 +1,108 @@
-/* Reset dan Variabel */
-:root {
-    --primary-color: #1e90ff;
-    --background-dark: #121212;
-    --background-lighter: #1e1e1e;
-    --card-background: #222;
-    --text-color: white;
-    --spacing-unit: 1rem;
-}
-
-/* Base Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background: var(--background-dark);
-    color: var(--text-color);
+    font-family: Arial, sans-serif;
     margin: 0;
-    line-height: 1.6;
+    padding: 0;
+    background-color: #1c1c1c;
+    color: white;
 }
 
-/* Layout Container */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: var(--spacing-unit);
-    width: 90%;
+header {
+    background-color: #333;
+    padding: 15px;
+    text-align: center;
 }
 
-/* Navigation */
-nav {
-    background: var(--background-lighter);
-    padding: var(--spacing-unit);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-.nav-content {
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.anime-container {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.anime {
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border: none;
+}
+
+#anime-info {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #444;
+    border-radius: 10px;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+section#kontak {
+    background-color: #333;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--spacing-unit);
 }
 
-nav a {
-    color: var(--text-color);
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: var(--primary-color);
-}
-
-/* Video Player Section */
-.video-section {
-    margin: 2rem 0;
-}
-
-#videoPlayer {
-    width: 100%;
-    aspect-ratio: 16/9;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-/* Video List */
-.video-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1rem;
-    margin: 2rem 0;
-}
-
-.video-list a {
-    background: var(--card-background);
-    color: var(--text-color);
-    padding: 1rem;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.video-list a:hover {
-    transform: translateY(-2px);
-    background: var(--background-lighter);
-}
-
-/* Anime Section */
-.anime-section {
-    background: var(--card-background);
-    border-radius: 8px;
-    padding: 2rem;
-    margin: 2rem 0;
-}
-
-.anime-button img {
-    width: 100%;
+label, input, textarea {
+    width: 80%;
     max-width: 400px;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+    margin-bottom: 10px;
 }
 
-.anime-button img:hover {
-    transform: scale(1.02);
-}
-
-/* Contact Form */
-.contact {
-    background: var(--card-background);
-    border-radius: 8px;
-    padding: 2rem;
-    margin: 2rem 0;
-}
-
-.contact form {
-    display: grid;
-    gap: 1rem;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.contact input,
-.contact textarea {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid var(--background-lighter);
-    border-radius: 4px;
-    background: var(--background-dark);
-    color: var(--text-color);
-}
-
-.contact button {
-    background: var(--primary-color);
-    color: var(--text-color);
-    padding: 1rem 2rem;
+button {
+    background-color: #ffcc00;
+    color: black;
+    padding: 10px 20px;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    border-radius: 5px;
 }
 
-.contact button:hover {
-    background: #1a7ad4;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .video-list {
-        grid-template-columns: 1fr;
-    }
-    
-    nav {
-        padding: 0.5rem;
-    }
-    
-    .nav-content {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    
-    #videoPlayer {
-        height: 300px;
-    }
-}
-
-/* Animation */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.fade-in {
-    animation: fadeIn 0.5s ease-in;
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #222;
 }
