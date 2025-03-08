@@ -1,42 +1,28 @@
 {
-  "name": "nontonX",
+  "name": "nontonx",
   "version": "1.0.0",
-  "description": "Nonton anime gratis dengan kualitas terbaik.",
+  "description": "NontonX adalah platform streaming film berbasis Next.js yang memungkinkan pengguna untuk menonton film secara langsung.",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --passWithNoTests",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "test": "jest"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Msnewbee/nontonX.git"
-  },
-  "author": "Msnewbee",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Msnewbee/nontonX/issues"
-  },
-  "homepage": "https://nonton-x.vercel.app",
   "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "framer-motion": "^12.4.10",
+    "lucide-react": "latest",
     "next": "latest",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "framer-motion": "^5.5.1",
-    "three": "^0.135.0"
+    "postcss": "^8.5.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^4.0.12"
   },
   "devDependencies": {
-    "@testing-library/react": "^13.0.0",
-    "@testing-library/jest-dom": "^5.16.5",
-    "jest": "^29.0.0",
-    "cypress": "^9.0.0"
-  },
-  "jest": {
-    "testEnvironment": "jsdom",
-    "setupFilesAfterEnv": ["@testing-library/jest-dom/extend-expect"]
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "jest": "^29.7.0"
   }
 }
