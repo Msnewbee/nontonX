@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nontonx - Situs Streaming Sederhana</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Nontonx</h1>
+        <nav>
+            <ul>
+                <li><a href="#streaming-area">Streaming</a></li>
+                <li><a href="#contact-area">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="streaming-area">
+            <h2>Tonton Sekarang</h2>
+            <div class="video-container">
+                <iframe width="854" height="480" src="[GANTI_DENGAN_URL_VIDEO_YOUTUBE_ANDA]" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <p>Sumber video: YouTube (Contoh)</p>
+            <p><b>Catatan Penting:</b> Ganti `[GANTI_DENGAN_URL_VIDEO_YOUTUBE_ANDA]` dengan URL video YouTube Anda (dari kode sematan YouTube).</p>
+        </section>
+
+        <section id="contact-area">
+            <h2>Hubungi Kami</h2>
+            <p>Punya pertanyaan atau masukan? Kirim pesan kepada kami melalui formulir di bawah ini.</p>
+            <form id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST">
+                <div class="form-group">
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Kirim Pesan</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Nontonx - Situs Streaming Sederhana. Dibuat dengan GitHub & Vercel.</p>
+    </footer>
+
+</body>
+</html>
