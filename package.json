@@ -26,7 +26,8 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "framer-motion": "^5.5.1"
+    "framer-motion": "^5.5.1",
+    "three": "^0.135.0"
   },
   "devDependencies": {
     "@testing-library/react": "^13.0.0",
